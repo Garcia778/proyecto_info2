@@ -1,0 +1,139 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; /* Un gris muy claro para el fondo */
+    color: #333;
+    overflow-x: hidden; /* Evita el scroll horizontal */
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    width: 90%;
+}
+
+h1 {
+    color: #4a4a4a; /* Un gris oscuro para el título */
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+.highlight {
+    color: #6a6a6a; /* Un gris medio para resaltar */
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    perspective: 1000px; /* Para el efecto de giro 3D */
+}
+
+.card {
+    background-color: #e0e0e0; /* Gris claro para las tarjetas */
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease-in-out, box-shadow 0.3s ease;
+    height: 200px; /* Altura fija para las tarjetas */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card.is-flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.card-front {
+    background-color: #d0d0d0; /* Gris un poco más oscuro para el frente */
+    color: #444;
+}
+
+.card-front h2 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    color: #5a5a5a;
+}
+
+.card-front p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.card-back {
+    background-color: #c0c0c0; /* Gris más oscuro para la parte trasera */
+    color: #333;
+    transform: rotateY(180deg);
+}
+
+.card-back p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.action-button {
+    background-color: #888; /* Un gris medio para el botón */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.action-button:hover {
+    background-color: #6a6a6a; /* Gris más oscuro al pasar el ratón */
+    transform: scale(1.05);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+    animation: fadeIn 0.8s ease-out forwards;
+    opacity: 0; /* Oculto inicialmente */
+}
+
+.card[data-index="0"] { animation-delay: 0.1s; }
+.card[data-index="1"] { animation-delay: 0.2s; }
+.card[data-index="2"] { animation-delay: 0.3s; }
+.card[data-index="3"] { animation-delay: 0.4s; }
+.card[data-index="4"] { animation-delay: 0.5s; }
