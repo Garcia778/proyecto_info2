@@ -3,74 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¿Quiénes Somos? - Robo de Información</title>
+    <title>¿Quiénes Somos?</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            padding: 20px;
-            text-align: center;
+            padding: 40px;
+            background-color: #e9ecef;
+            color: #343a40;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align to the top */
+            min-height: 100vh; /* Ensures content is centered vertically on shorter screens */
+            box-sizing: border-box; /* Include padding in element's total width and height */
         }
         .container {
-            background-color: #fff;
-            margin: 20px auto;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
+            max-width: 900px;
+            width: 100%;
+            margin: auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
         }
         h1 {
-            color: #0056b3;
-            margin-bottom: 20px;
+            color: #007bff;
+            margin-bottom: 25px;
+            font-size: 2.5em;
         }
         p {
             font-size: 1.1em;
-            line-height: 1.6;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            color: #555;
         }
-        .pdf-container {
-            margin-top: 30px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            overflow: hidden;
-            background-color: #eee;
+        .pdf-section {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #dee2e6;
+        }
+        h2 {
+            color: #007bff;
+            margin-bottom: 25px;
+            font-size: 1.8em;
         }
         iframe {
             width: 100%;
-            height: 600px; /* Ajusta la altura según sea necesario */
-            border: none;
+            height: 650px; /* Adjust height as needed for better viewing */
+            border: 1px solid #ced4da;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
-        footer {
-            margin-top: 40px;
-            font-size: 0.9em;
-            color: #777;
+        .download-link {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+        .download-link:hover {
+            background-color: #218838;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>¿Quiénes Somos?</h1>
-        <p>
-            Somos un grupo de alumnos de bachillerato de 4to semestre.<br>
-            Nos hemos unido con un propósito claro y fundamental:<br>
-            Comunicar y concientizar a la comunidad sobre el robo de información.<br>
-            Nuestra misión es educar sobre los riesgos y métodos de prevención.<br>
-            Creemos firmemente en el poder de la información para proteger a todos.
-        </p>
+        <p>Somos alumnos de bachillerato de 4to semestre.</p>
+        <p>Nuestro principal objetivo es **comunicar** y **concientizar**</p>
+        <p>sobre el importante tema del **robo de información**.</p>
+        <p>Buscamos educar a la comunidad para prevenir riesgos</p>
+        <p>y promover prácticas seguras en línea. ¡Infórmate con nosotros!</p>
 
-        <h2>Información Relevante</h2>
-        <div class="pdf-container">
-            <iframe src="ruta/a/tu/archivo.pdf" title="Documento PDF sobre robo de información">
-                Este navegador no soporta la visualización de PDFs.
-                Por favor, <a href="ruta/a/tu/archivo.pdf" target="_blank">descarga el PDF aquí</a>.
+        <div class="pdf-section">
+            <h2>Explora Nuestro Contenido</h2>
+            <p>A continuación, puedes visualizar nuestro documento en PDF. Si tienes problemas para verlo directamente en la página, puedes descargarlo.</p>
+
+            <iframe src="robo de informacion.pdf" type="application/pdf">
+                <p>Tu navegador no soporta la visualización de PDFs. No te preocupes, puedes <a href="robo de informacion.pdf" class="download-link" download>descargar el PDF aquí</a>.</p>
             </iframe>
+
+            <a href="robo de informacion.pdf" class="download-link" download>Descargar "Robo de Información" PDF</a>
         </div>
     </div>
-
-    <footer>
-        <p>&copy; 2025 Alumnos de Bachillerato - Todos los derechos reservados.</p>
-    </footer>
 </body>
 </html>
